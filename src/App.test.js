@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import Component1 from './Component1';
 import Input from './InputBox'
+import Component2 from './Component2'
 test('Test React Component',()=>{
   render(<Component1/>)
   const text=screen.getByText('First React Test case');  //screen function kya karta hai jo bhi component humne render kiya uska sara text get karlega
@@ -149,4 +150,15 @@ describe('nested Described',()=>{
        expect(checkIput).toHaveAttribute('value','yash verma')
     })
   })
+})
+
+
+
+
+//Event handling testing
+test('input on change event testing',()=>{
+  render(<Component2/>)
+  let input = screen.getByPlaceholderText('onchange testing');
+  fireEvent.change(input,{target:{value:'yash'}})
+  expect(input.value).toBe('yash')
 })
