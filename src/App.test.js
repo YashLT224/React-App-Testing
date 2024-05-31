@@ -47,4 +47,11 @@ test('testing input box placeholder ',()=>{
   render(<Input/>)
    let checkIputPlaceholder=screen.getByPlaceholderText('Enter username')
    expect(checkIputPlaceholder).toBeInTheDocument()
+    
+})
+test('testing input box attributes',()=>{
+  render(<Input/>)
+   let checkIput=screen.getByRole('textbox')
+   expect(checkIput).toHaveAttribute('name','username')
+   expect(checkIput).toHaveAttribute('id','yash')
 })

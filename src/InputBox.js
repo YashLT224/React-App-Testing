@@ -3,7 +3,7 @@ import React from 'react'
 const InputBox = () => {
   return (
     <div>
-      <input type="text" placeholder="Enter username"/>
+      <input id='yash' type="text" placeholder="Enter username" name='username'/>
     </div>
   )
 }
