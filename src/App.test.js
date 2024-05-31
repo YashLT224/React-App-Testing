@@ -116,3 +116,37 @@ describe('API test Case Group',()=>{
 //      expect(checkIput).toHaveAttribute('value','yash verma')
 //   })
 // })
+
+
+describe('nested Described',()=>{
+  test('test case 1: testing input box type',()=>{
+    render(<Input/>)
+     let checkIput=screen.getByRole('textbox')
+     expect(checkIput).toHaveAttribute('type','text')
+     
+  })
+  test('test case 2: testing input box attributes',()=>{
+    render(<Input/>)
+     let checkIput=screen.getByRole('textbox')
+     expect(checkIput).toHaveAttribute('name','username')
+     expect(checkIput).toHaveAttribute('id','yash')
+     expect(checkIput).toHaveAttribute('value','yash verma')
+  })
+
+
+  describe('child described',()=>{
+    test('test case d1: testing input box type',()=>{
+      render(<Input/>)
+       let checkIput=screen.getByRole('textbox')
+       expect(checkIput).toHaveAttribute('type','text')
+       
+    })
+    test('test case d2: testing input box attributes',()=>{
+      render(<Input/>)
+       let checkIput=screen.getByRole('textbox')
+       expect(checkIput).toHaveAttribute('name','username')
+       expect(checkIput).toHaveAttribute('id','yash')
+       expect(checkIput).toHaveAttribute('value','yash verma')
+    })
+  })
+})
