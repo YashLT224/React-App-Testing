@@ -54,4 +54,65 @@ test('testing input box attributes',()=>{
    let checkIput=screen.getByRole('textbox')
    expect(checkIput).toHaveAttribute('name','username')
    expect(checkIput).toHaveAttribute('id','yash')
+   expect(checkIput).toHaveAttribute('value','yash verma')
 })
+
+test('testing input box type',()=>{
+  render(<Input/>)
+   let checkIput=screen.getByRole('textbox')
+   expect(checkIput).toHaveAttribute('type','text')
+   
+})
+
+
+
+
+
+describe('UI test Case Group',()=>{
+  test('test case 1: testing input box type',()=>{
+    render(<Input/>)
+     let checkIput=screen.getByRole('textbox')
+     expect(checkIput).toHaveAttribute('type','text')
+     
+  })
+  test('test case 2: testing input box attributes',()=>{
+    render(<Input/>)
+     let checkIput=screen.getByRole('textbox')
+     expect(checkIput).toHaveAttribute('name','username')
+     expect(checkIput).toHaveAttribute('id','yash')
+     expect(checkIput).toHaveAttribute('value','yash verma')
+  })
+})
+
+
+describe('API test Case Group',()=>{
+  test('test case 1: testing input box type',()=>{
+    render(<Input/>)
+     let checkIput=screen.getByRole('textbox')
+     expect(checkIput).toHaveAttribute('type','text')
+     
+  })
+  test('test case 2: testing input box attributes',()=>{
+    render(<Input/>)
+     let checkIput=screen.getByRole('textbox')
+     expect(checkIput).toHaveAttribute('name','username')
+     expect(checkIput).toHaveAttribute('id','yash')
+     expect(checkIput).toHaveAttribute('value','yash verma')
+  })
+})
+
+// describe.only('to call this group only and skip all other tests',()=>{
+//   test('test case 1: testing input box type',()=>{
+//     render(<Input/>)
+//      let checkIput=screen.getByRole('textbox')
+//      expect(checkIput).toHaveAttribute('type','text')
+     
+//   })
+//   test('test case 2: testing input box attributes',()=>{
+//     render(<Input/>)
+//      let checkIput=screen.getByRole('textbox')
+//      expect(checkIput).toHaveAttribute('name','username')
+//      expect(checkIput).toHaveAttribute('id','yash')
+//      expect(checkIput).toHaveAttribute('value','yash verma')
+//   })
+// })
