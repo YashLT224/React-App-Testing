@@ -162,3 +162,11 @@ test('input on change event testing',()=>{
   fireEvent.change(input,{target:{value:'yash'}})
   expect(input.value).toBe('yash')
 })
+
+
+test('button onclick testing',()=>{
+  render(<Component2/>)
+  let btn = screen.getByRole ('button');
+  fireEvent.click(btn);
+  expect(screen.getByText("on click test")).toBeInTheDocument();
+})
