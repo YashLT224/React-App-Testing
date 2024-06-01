@@ -170,3 +170,24 @@ test('button onclick testing',()=>{
   fireEvent.click(btn);
   expect(screen.getByText("on click test")).toBeInTheDocument();
 })
+
+beforeAll(()=>{
+  console.log('run before all tests')
+})
+beforeEach(()=>{
+  console.log('run before every tests')
+})
+afterAll(()=>{
+  console.log('run after all tests')
+})
+afterEach(()=>{
+  console.log('run after every tests')
+})
+
+
+
+test('snapshot testing for app.js file',()=>{
+  const container=render(<Component2/>)
+expect(container).toMatchSnapshot();
+
+})

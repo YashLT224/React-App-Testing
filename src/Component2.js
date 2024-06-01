@@ -5,6 +5,7 @@ const Component2 = () => {
     const [buttondata,setButtonData]=useState('');
   return (
     <div>
+        <h1>snapshot</h1>
         <input id='verma' type="text" placeholder="onchange testing" name='username' value={data} onChange={(e)=>setData(e.target.value)}/>
     <button onClick={()=>setButtonData('on click test')}>Update Data</button>
     <h1>{buttondata}</h1>
