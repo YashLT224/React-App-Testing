@@ -116,3 +116,20 @@ test('p tag testing',()=>{
         expect(PTags[i]).toBeInTheDocument()
     }
 })
+
+
+
+test('getBy TestId testing',()=>{
+    render(<File2/>)
+    let divId=screen.getByTestId('div-test-id')
+    expect(divId).toBeInTheDocument()
+   
+
+    let testids=screen.getAllByTestId('div-multiple-test-id')
+    for(let i=0;i<testids.length;i++){
+        expect(testids[i]).toBeInTheDocument()
+     }
+})
+
+
+ 

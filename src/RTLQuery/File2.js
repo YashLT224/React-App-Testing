@@ -49,6 +49,20 @@ const File1 = () => {
 
       <p>multiple P tag testing</p>
       <p>multiple P tag testing</p>
+
+
+<div data-testid='div-test-id'>
+    testing with test id
+</div>
+
+<div data-testid='div-multiple-test-id'>
+    testing with test id
+</div>
+<div data-testid='div-multiple-test-id'>
+    testing with test id
+</div>
+
+
     </div>
   );
 };
