@@ -45,6 +45,10 @@ const File1 = () => {
       <input type="text" placeholder="testingg" />
 
       <button>login</button>
+      <p className='para'>P tag testing</p>
+
+      <p>multiple P tag testing</p>
+      <p>multiple P tag testing</p>
     </div>
   );
 };

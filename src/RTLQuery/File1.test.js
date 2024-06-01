@@ -103,3 +103,16 @@ test('getBytext',()=>{
     let button=screen.getByText('login')
     expect(button).toBeInTheDocument()
 })
+
+test('p tag testing',()=>{
+    render(<File2/>)
+    let PTag=screen.getByText('P tag testing')
+    expect(PTag).toBeInTheDocument()
+    expect(PTag).toHaveClass('para')
+    expect(PTag).toHaveAttribute('class')
+
+    let PTags=screen.getAllByText('multiple P tag testing')
+    for(let i=0;i<PTags.length;i++){
+        expect(PTags[i]).toBeInTheDocument()
+    }
+})
