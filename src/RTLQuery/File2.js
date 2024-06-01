@@ -10,6 +10,16 @@ const File1 = () => {
       <label htmlFor='input2'>phnno</label>
       <input id='input2' type='text' />
       <div role='dummy'>dummy text</div>
+
+      <button>click me</button>
+      <button>click me</button>
+
+      <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+      </select>
     </div>
   )
 }

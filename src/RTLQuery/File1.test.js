@@ -37,3 +37,19 @@ test("custom roles ", () => {
      expect(dv1).toBeInTheDocument();
 
   });
+
+
+test('get All by Role',()=>{
+    render(<File2/>);
+
+    const buttons= screen.getAllByRole('button')
+    for(let i=0;i<buttons.length;i++){
+        expect(buttons[i]).toBeInTheDocument()
+    }
+
+    const options=screen.getAllByRole('option')
+    for(let i=0;i<options.length;i++){
+        expect(options[i]).toBeInTheDocument()
+    }
+    
+})

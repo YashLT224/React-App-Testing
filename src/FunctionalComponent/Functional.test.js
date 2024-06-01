@@ -9,7 +9,7 @@ test('method testing functional component way 1',()=>{
     expect(screen.getByText('hello')).toBeInTheDocument();
 })
 
-
 test('testing functional method outside component',()=>{
     expect(handleOtherMethod()).toMatch(/hi/i)
 })
+

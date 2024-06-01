@@ -4,6 +4,8 @@ import Component1 from './Component1';
 import ClassComponet from './ClassComponent/User'
 import InputBox from './InputBox';
 import Functiontesting from './FunctionalComponent/functionalTesting'
+import File1 from './RTLQuery/File1';
+import File2 from './RTLQuery/File2';
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,8 @@ function App() {
      <InputBox/>
      <ClassComponet/>
      <Functiontesting/>
+     <File1/>
+     <File2/>
 
     </div>
   );
