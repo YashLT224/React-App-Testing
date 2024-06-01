@@ -53,3 +53,28 @@ test('get All by Role',()=>{
     }
     
 })
+
+
+test('getByLabel',()=>{
+    render(<File2/>);
+    let input=screen.getByLabelText('studentname');
+    expect(input).toBeInTheDocument()
+    expect(input).toHaveValue('anil')
+
+
+    let checkbox=screen.getByLabelText('skills');
+    expect(checkbox).toBeInTheDocument()
+     expect(checkbox).toBeChecked()
+})
+
+
+
+test('getAllByLabelText',()=>{
+    render(<File2/>)
+    const inputs=screen.getAllByLabelText('a1')
+    for(let i=0;i<inputs.length;i++){
+        expect(inputs[i]).toBeInTheDocument()
+        expect(inputs[i]).toHaveValue(`a${i+1}`)
+    }
+
+})

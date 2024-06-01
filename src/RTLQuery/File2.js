@@ -20,6 +20,23 @@ const File1 = () => {
           <option>3</option>
           <option>4</option>
       </select>
+      <label htmlFor='student'>studentname</label>
+      <input id='student' type='text' value='anil' />
+
+
+      <label htmlFor='skills'>skills</label>
+      <input id='skills' type='checkbox' defaultChecked= {true} />
+   
+
+   <label htmlFor='a1'>a1</label>
+      <input id='a1' type='text'  defaultValue={'a1'} />
+      <label htmlFor='a2'>a1</label>
+      <input id='a2' type='text'  defaultValue={'a2'} />
+      <label htmlFor='a3'>a1</label>
+      <input id='a3' type='text' defaultValue={'a3'} />
+   
+   
+   
     </div>
   )
 }
