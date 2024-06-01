@@ -77,4 +77,29 @@ test('getAllByLabelText',()=>{
         expect(inputs[i]).toHaveValue(`a${i+1}`)
     }
 
+    const checkboxes=screen.getAllByLabelText('c1')
+    for(let i=0;i<checkboxes.length;i++){
+        expect(checkboxes[i]).toBeInTheDocument()
+        expect(checkboxes[i]).toBeChecked()
+    }
+
+})
+
+
+test('getbyPlaceholderText',()=>{
+    render(<File2/>)
+    let input= screen.getByPlaceholderText('testing');
+    expect(input).toBeInTheDocument()
+
+    let inputs= screen.getAllByPlaceholderText('testingg');
+    for(let i=0;i<inputs.length;i++){
+        expect(inputs[i]).toBeInTheDocument()
+    }
+   
+})
+
+test('getBytext',()=>{
+    render(<File2/>)
+    let button=screen.getByText('login')
+    expect(button).toBeInTheDocument()
 })
