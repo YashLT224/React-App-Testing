@@ -23,3 +23,9 @@ test("test input negative cases", () => {
   expect(btn).not.toHaveAttribute("data-test");
   expect(btn).not.toBeDisabled();
 });
+
+test('text match with string',()=>{
+    render(<Assertion1 />);
+    const div= screen.getByText('hello world',{exact:false})
+    expect(div).toBeInTheDocument()
+})
