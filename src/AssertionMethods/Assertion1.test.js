@@ -26,6 +26,21 @@ test("test input negative cases", () => {
 
 test('text match with string',()=>{
     render(<Assertion1 />);
-    const div= screen.getByText('hello world',{exact:false})
+    const div= screen.getByText('hELlo world',{exact:false})
     expect(div).toBeInTheDocument()
+})
+
+test('text match with regex',()=>{
+    render(<Assertion1 />);
+    const div= screen.getByText(/hello/)
+    expect(div).toBeInTheDocument()
+
+    const div2= screen.getByText(/ello/)
+    expect(div2).toBeInTheDocument()
+
+    const div3= screen.getByText(/eLLo/i)
+    expect(div3).toBeInTheDocument()
+
+    const div4= screen.getByText(/Hello w?orld/i) //ignore w if present or not it will ignore -> Hello orld is passed 
+    expect(div4).toBeInTheDocument()
 })
