@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen ,configure} from "@testing-library/react";
+import '@testing-library/jest-dom/extend-expect'; 
 import File1 from "./File1";
 import File2 from "./File2";
 test("get by role- input", () => {
@@ -128,6 +129,33 @@ test('getBy TestId testing',()=>{
     let testids=screen.getAllByTestId('div-multiple-test-id')
     for(let i=0;i<testids.length;i++){
         expect(testids[i]).toBeInTheDocument()
+     }
+})
+
+
+
+   
+  
+test('test div with element-id', () => {
+    configure({ testIdAttribute: 'element-id' });
+    render(<File1 />);
+    const divElement = screen.getByTestId('override-id');
+     expect(divElement).toBeInTheDocument();
+});
+
+
+test('testing with getbydisplayvalue',()=>{
+    render(<File2/>)
+    const input= screen.getByDisplayValue('GetByDisplayValue')
+    expect(input).toBeInTheDocument()
+
+    const textarea= screen.getByDisplayValue('textareaGetByDisplayValue')
+    expect(textarea).toBeInTheDocument()
+
+
+    const multipleelements=screen.getAllByDisplayValue('multipleGetByDisplayValue')
+    for(let i=0;i<multipleelements.length;i++){
+        expect(multipleelements[i]).toBeInTheDocument()
      }
 })
 

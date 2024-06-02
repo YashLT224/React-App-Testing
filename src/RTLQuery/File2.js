@@ -45,24 +45,24 @@ const File1 = () => {
       <input type="text" placeholder="testingg" />
 
       <button>login</button>
-      <p className='para'>P tag testing</p>
+      <p className="para">P tag testing</p>
 
       <p>multiple P tag testing</p>
       <p>multiple P tag testing</p>
 
+      <div data-testid="div-test-id">testing with test id</div>
 
-<div data-testid='div-test-id'>
-    testing with test id
-</div>
+      <div data-testid="div-multiple-test-id">testing with test id</div>
+      <div data-testid="div-multiple-test-id">testing with test id</div>
 
-<div data-testid='div-multiple-test-id'>
-    testing with test id
-</div>
-<div data-testid='div-multiple-test-id'>
-    testing with test id
-</div>
+   
+
+   <input type="text" defaultValue={'GetByDisplayValue'}/>
+   <textarea defaultValue={'textareaGetByDisplayValue'}/>
 
 
+   <input type="text" defaultValue={'multipleGetByDisplayValue'}/>
+   <textarea defaultValue={'multipleGetByDisplayValue'}/>
     </div>
   );
 };
