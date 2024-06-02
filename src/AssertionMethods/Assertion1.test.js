@@ -1,7 +1,8 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Assertion1 from "./Assertion1";
 import Assertion2 from "./Assertion2";
+import PropsTesting from "./PropsTesting";
 test("test input positive cases", () => {
   render(<Assertion1 />);
   const input = screen.getByRole("textbox");
@@ -125,18 +126,30 @@ test("click event with user event library", async () => {
   expect(screen.getByText("hello")).toBeInTheDocument();
 });
 
-
-test('On change Event tetsting',async()=>{
-    userEvent.setup();
-    render(<Assertion2 />);
-    let el=screen.getByRole('textbox')
-  await userEvent.type(el,'anil');
+test("On change Event tetsting", async () => {
+  userEvent.setup();
+  render(<Assertion2 />);
+  let el = screen.getByRole("textbox");
+  await userEvent.type(el, "anil");
   expect(screen.getByText("anil")).toBeInTheDocument();
+});
 
-})
+test("act function", async () => {
+  userEvent.setup();
+  render(<Assertion2 />);
+  const input = screen.getByRole("textbox");
 
-test('act function',async()=>{
-    userEvent.setup();
-    render(<Assertion2/>);
-    const input=screen.getByRole('textbox')
+  await act(async () => {
+    await userEvent.type(input, "anil");
+  });
+
+  expect(screen.getByText("anil")).toBeInTheDocument();
+});
+
+
+test('props testing',()=>{
+render(<PropsTesting name='tony'/>)
+const user=screen.getByText('tony')
+expect(user).toBeInTheDocument()
+
 })

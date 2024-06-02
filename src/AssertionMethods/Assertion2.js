@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import User from "./PropsTesting";
 const Assertion2 = () => {
   const [data, setData] = useState(false);
   const [buttonData, setButtonData] = useState('');
@@ -28,6 +28,7 @@ const Assertion2 = () => {
       <button onClick={()=>setButtonData('hello')}>clickme</button>
       <h1>{inputData}</h1>
       <input type="text" placeholder='enter name' onChange={(e)=>setInputData(e.target.value)}/>
+      <User name='yash'/>
     </div>
   );
 };
