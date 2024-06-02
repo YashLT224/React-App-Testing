@@ -146,10 +146,17 @@ test("act function", async () => {
   expect(screen.getByText("anil")).toBeInTheDocument();
 });
 
+test("props testing", () => {
+  render(<PropsTesting name="tony" />);
+  const user = screen.getByText("tony");
+  expect(user).toBeInTheDocument();
+});
 
-test('props testing',()=>{
-render(<PropsTesting name='tony'/>)
-const user=screen.getByText('tony')
-expect(user).toBeInTheDocument()
-
-})
+test("functional props testing", async () => {
+  userEvent.setup();
+  const testFunction = jest.fn(); // funcion mocking
+  render(<PropsTesting name="tony" testFunction={testFunction} />);
+  const btn = screen.getByRole("button");
+  await userEvent.click(btn);
+  expect(testFunction).toBeCalled();
+});
