@@ -159,5 +159,31 @@ test('testing with getbydisplayvalue',()=>{
      }
 })
 
+test('getby title testing',()=>{
+    render(<File2/>)
+    const btn= screen.getByTitle('clickme');
+    expect(btn).toBeInTheDocument()
+
+    const span= screen.getByTitle('black spade suit');
+    expect(span).toBeInTheDocument()
+
+
+    const spans= screen.getAllByTitle('black spade suits');
+    for(let i=0;i<spans.length;i++){
+        expect(spans[i]).toBeInTheDocument()
+     }
+   
+})
+
+test('get by alt text testing',()=>{
+    render(<File2/>)
+    const img= screen.getByAltText('scenery');
+    expect(img).toBeInTheDocument()
+
+    const images= screen.getAllByAltText('scenery2');
+    for(let i=0;i<images.length;i++){
+        expect(images[i]).toBeInTheDocument()
+     }
+})
 
  

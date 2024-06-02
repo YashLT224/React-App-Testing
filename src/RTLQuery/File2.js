@@ -63,6 +63,20 @@ const File1 = () => {
 
    <input type="text" defaultValue={'multipleGetByDisplayValue'}/>
    <textarea defaultValue={'multipleGetByDisplayValue'}/>
+
+
+   <button title='clickme'>getAllByTitle</button>
+
+
+   <span title='black spade suit'>I will display &#x2660;</span>
+   <span title='black spade suits'>I will display &#x2626;</span>
+   <span title='black spade suits'>I will display &#x2626;</span>
+
+
+   <img src='https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800' alt='scenery'/>
+
+   <img src='https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800' alt='scenery2'/>
+   <img src='https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800' alt='scenery2'/>
     </div>
   );
 };

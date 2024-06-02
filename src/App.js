@@ -6,6 +6,7 @@ import InputBox from './InputBox';
 import Functiontesting from './FunctionalComponent/functionalTesting'
 import File1 from './RTLQuery/File1';
 import File2 from './RTLQuery/File2';
+import Assertion1 from './AssertionMethods/Assertion1';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
      <Functiontesting/>
      <File1/>
      <File2/>
+     <Assertion1/>
 
     </div>
   );
