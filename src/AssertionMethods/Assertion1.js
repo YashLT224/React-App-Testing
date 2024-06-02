@@ -9,7 +9,11 @@ const Assertion1 = () => {
         name="username"
         className="test-style"
         id="username"
+        data-test='test'
       />
+      <button className='btn' id='btn-id'>click me</button>
+        
+      
     </div>
   );
 };
