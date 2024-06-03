@@ -1,7 +1,6 @@
 import { fireEvent, render, screen ,configure} from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect'; // For jest-dom matchers
 import APITest from './ApiCall'
-// import './mockServices/server'
 test('heading test',()=>{
     render(<APITest/>)
     const heading= screen.getByText('list of users')

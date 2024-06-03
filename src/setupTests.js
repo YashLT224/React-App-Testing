@@ -4,12 +4,13 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 import { TextEncoder, TextDecoder } from 'util';
-//  import {server} from './APICallTesting/mockServices/server'
+//   import {mswServer} from './APICallTesting/mockServices/server'
 
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+// global.TextEncoder = TextEncoder;
+// global.TextDecoder = TextDecoder;
+
 
  
-// beforeAll(()=>server.listen());
-// afterEach(()=>server.resetHandlers());
-// afterAll(()=>server.close())
+// beforeAll(()=>mswServer.listen());
+// afterEach(()=>mswServer.resetHandlers());
+// afterAll(()=>mswServer.close())
