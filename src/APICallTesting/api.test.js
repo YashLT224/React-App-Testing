@@ -18,3 +18,11 @@ test('heading test',()=>{
 //     const el= await screen.findAllByRole('listitem', {}, { timeout: 2000 });
 //     expect(el).toHaveLength(4)
 // })
+
+
+it('should return true when input is valid', () => {
+    render(<APITest/>)
+    const heading= screen.getByText('list of users')
+    expect(heading).toBeInTheDocument()
+  });
+  
