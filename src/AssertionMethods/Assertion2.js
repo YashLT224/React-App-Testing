@@ -8,7 +8,7 @@ const Assertion2 = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      alert("nds");
+     
       setData(true);
     }, 1000);
   }, []);
