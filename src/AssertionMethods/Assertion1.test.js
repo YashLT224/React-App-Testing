@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, within, act } from "@testing-library/react";
+import '@testing-library/jest-dom/extend-expect'; 
 import userEvent from "@testing-library/user-event";
 import Assertion1 from "./Assertion1";
 import Assertion2 from "./Assertion2";

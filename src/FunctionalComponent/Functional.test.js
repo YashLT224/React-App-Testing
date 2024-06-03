@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'; 
 import FunctionalComponent1 from './functionalTesting'
 import handleOtherMethod from './helper'
 

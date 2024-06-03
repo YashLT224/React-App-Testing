@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'; 
 import Component1 from './Component1';
 import Input from './InputBox'
 import Component2 from './Component2'

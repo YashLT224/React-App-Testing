@@ -1,5 +1,5 @@
 import sum from './sum'
-
+import '@testing-library/jest-dom/extend-expect'; 
 //Normal function testing
 test('function testing',()=>{
     let a=10;

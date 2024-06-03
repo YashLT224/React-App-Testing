@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '@testing-library/jest-dom/extend-expect'; 
 const File1 = () => {
   return (
     <div>

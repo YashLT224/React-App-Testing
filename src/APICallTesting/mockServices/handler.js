@@ -1,23 +1,48 @@
-import { rest } from "msw";
+// import { rest } from "msw";
+// import { http } from 'msw'
+// export const handlers = [
+//     http.get("https://jsonplaceholder.typicode.com/users", (req, res, ctx) => {
+//     return res(
+//       ctx.status(200),
+//       ctx.json([
+//         {
+//           name: "anil",
+//         },
+//         {
+//           name: "john",
+//         },
+//         {
+//           name: "tarun",
+//         },
+//         {
+//           name: "yash",
+//         },
+//       ])
+//     );
+//   }),
+// ];
+
+import { rest } from 'msw';
 
 export const handlers = [
-  rest.get("https://jsonplaceholder.typicode.com/users", (req, res, ctx) => {
+  rest.get('https://jsonplaceholder.typicode.com/users', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json([
         {
-          name: "anil",
+          name: 'anil',
         },
         {
-          name: "john",
+          name: 'john',
         },
         {
-          name: "tarun",
+          name: 'tarun',
         },
         {
-          name: "yash",
+          name: 'yash',
         },
       ])
     );
   }),
 ];
+
