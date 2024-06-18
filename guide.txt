@@ -1,0 +1,1 @@
+sum.test.js -> app.test.js -> class Component  user.test.js -> RTL query -> File1.test.js-> assertion1.test.js
